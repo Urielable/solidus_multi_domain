@@ -51,6 +51,7 @@ module SpreeMultiDomain
           end
         end
 
+        alias_method :find_layout_without_multi_store, :find_layout
         alias_method :find_layout, :find_layout_with_multi_store
       end
     end
@@ -68,6 +69,7 @@ module SpreeMultiDomain
 
           @current_order
         end
+        alias_method :current_order_without_multi_domain, :current_order
         alias_method :current_order, :current_order_with_multi_domain
       end
     end
